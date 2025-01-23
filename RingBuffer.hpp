@@ -81,6 +81,15 @@ public:
         return true;
     }
 
+    /* Clear the ring buffer */
+    void clear()
+    {
+        head = 0;
+        tail = 0;
+        full = false;
+        empty = true;
+    }
+
 private:
     T *data;               // Array to store data
     unsigned int capacity; // Maximum capacity of the buffer
